@@ -231,6 +231,7 @@ header {
         background-image: url('../assets/image-hero-mobile.png');
         background-position: center;
         background-size: cover;
+        z-index: -1;
     }
 }
 
@@ -434,7 +435,30 @@ footer {
             li:first-child h2 {
                 font-size: 32px;
                 line-height: 40px;
+
             }
+
+            li {
+                padding: 0 2rem;
+
+                .list__item-logo img {
+                    width: 56px;
+                }
+
+                h2 {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 92px;
+                    ;
+                }
+            }
+
+
         }
 
     }
