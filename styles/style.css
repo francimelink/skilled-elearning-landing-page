@@ -161,6 +161,8 @@ nav {
     background-color: #666CA3; }
 
 header {
+  display: flex;
+  flex-direction: column;
   padding: 1rem calc(100vw - 96%); }
   header .header__detail {
     margin-bottom: 2.875rem; }
@@ -179,10 +181,11 @@ header {
   header .header__detail a:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%); }
   header .header__image {
-    text-align: center;
-    width: 100%; }
-    header .header__image img {
-      width: 100%; }
+    height: 80vw;
+    width: 100%;
+    background-image: url("../assets/image-hero-mobile.png");
+    background-position: center;
+    background-size: cover; }
 
 main {
   padding: 0 1rem; }
@@ -217,6 +220,8 @@ main {
         bottom: 2rem;
         padding: 0;
         color: #F74780; }
+      main ul li a:hover {
+        color: #FFA7C3; }
     main ul li:first-child {
       background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
       padding: 24px 29px 32px 28px;
@@ -254,6 +259,7 @@ footer {
 
   header {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 569px;
     padding-right: 0; }
@@ -264,13 +270,11 @@ footer {
       margin-bottom: 0;
       min-width: 400px; }
     header .header__image {
-      position: relative; }
-      header .header__image img {
-        z-index: -1;
-        position: absolute;
-        width: 640px;
-        top: -370px;
-        right: -250px; }
+      height: 640px;
+      background-image: url("../assets/image-hero-tablet.png");
+      background-size: 640px;
+      background-position: bottom 5vh right -250px;
+      background-repeat: no-repeat; }
 
   main ul {
     display: grid;
@@ -285,8 +289,9 @@ footer {
       padding: 14px 2rem; }
 
   header {
-    padding: 1.5rem calc(100vw - 89%); }
+    padding-left: calc(100vw - 89%); }
     header .header__detail {
+      flex: 40%;
       margin-bottom: 0;
       max-width: 460px; }
     header .header__detail h1 {
@@ -299,11 +304,14 @@ footer {
       display: inline-block;
       margin-top: 40px;
       padding: 1rem 2rem; }
-    header .header__image img {
-      height: 937px;
-      width: 992px;
-      right: -460px;
-      top: -540px; }
+    header .header__image {
+      flex: 60%;
+      max-height: 936px;
+      height: 60vw;
+      background-image: url("../assets/image-hero-desktop.png");
+      background-size: 992px;
+      background-position: bottom 5vh right -350px;
+      background-repeat: no-repeat; }
 
   main {
     padding: 1.5rem calc(100vw - 89%);
@@ -311,6 +319,9 @@ footer {
     main ul {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 30px; }
+      main ul li:first-child h2 {
+        font-size: 32px;
+        line-height: 40px; }
 
   footer {
     padding: 2rem calc(100vw - 89%); }

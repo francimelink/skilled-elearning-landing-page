@@ -195,6 +195,8 @@ nav {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     padding: 1rem calc(100vw - 96%);
 
     .header__detail {
@@ -224,12 +226,11 @@ header {
     }
 
     .header__image {
-        text-align: center;
+        height: 80vw;
         width: 100%;
-
-        img {
-            width: 100%;
-        }
+        background-image: url('../assets/image-hero-mobile.png');
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -276,6 +277,10 @@ main {
                 padding: 0;
                 color: #F74780;
 
+            }
+
+            a:hover {
+                color: #FFA7C3;
             }
         }
 
@@ -330,6 +335,7 @@ footer {
 
     header {
         display: flex;
+        flex-direction: row;
         align-items: center;
         height: 569px;
         padding-right: 0;
@@ -345,15 +351,11 @@ footer {
         }
 
         .header__image {
-            position: relative;
-
-            img {
-                z-index: -1;
-                position: absolute;
-                width: 640px;
-                top: -370px;
-                right: -250px;
-            }
+            height: 640px;
+            background-image: url('../assets/image-hero-tablet.png');
+            background-size: 640px;
+            background-position: bottom 5vh right -250px;
+            background-repeat: no-repeat;
         }
 
 
@@ -386,9 +388,10 @@ footer {
     }
 
     header {
-        padding: 1.5rem calc(100vw - 89%);
+        padding-left: calc(100vw - 89%);
 
         .header__detail {
+            flex: 40%;
             margin-bottom: 0;
             max-width: 460px;
         }
@@ -410,14 +413,13 @@ footer {
         }
 
         .header__image {
-
-            img {
-                height: 937px;
-                width: 992px;
-                right: -460px;
-                top: -540px;
-
-            }
+            flex: 60%;
+            max-height: 936px;
+            height: 60vw;
+            background-image: url('../assets/image-hero-desktop.png');
+            background-size: 992px;
+            background-position: bottom 5vh right -350px;
+            background-repeat: no-repeat;
         }
     }
 
@@ -428,7 +430,13 @@ footer {
         ul {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 30px;
+
+            li:first-child h2 {
+                font-size: 32px;
+                line-height: 40px;
+            }
         }
+
     }
 
     footer {
